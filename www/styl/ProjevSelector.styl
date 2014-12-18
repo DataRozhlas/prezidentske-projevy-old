@@ -1,4 +1,8 @@
 .projev-selector
+  position absolute
+  width 100%
+  opacity 0.2
+  transition opacity 0.4s
   ol
     list-style-type none
     margin 0px
@@ -6,9 +10,7 @@
     float left
     width 970px
     position absolute
-    height 90px
-    opacity 0.2
-    transition opacity 0.4s
+    height 27px
     li
       box-sizing content-box
       display block
@@ -41,9 +43,9 @@
     .point.color
       height 7px !important
   &:hover
-    ol
-      background white
-      opacity 1
+    height 135px
+    background linear-gradient(to top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.98) 7px,rgba(255,255,255,0.98) 100%); /* W3C */
+    opacity 1
     .point.gs
       opacity 0
     .point.color
