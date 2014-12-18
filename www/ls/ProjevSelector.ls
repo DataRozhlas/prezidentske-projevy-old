@@ -1,9 +1,22 @@
+popisky =
+  "Gottwald"
+  "Zápotocký"
+  "Novotný"
+  "Svoboda"
+  "Husák"
+  "Havel"
+  "Klaus"
+  "Zeman"
+  "Delší sloupec značí delší projev"
+  "Klaus, Uhde"
 class ig.ProjevSelector
   (@parentElement, @projevy) ->
     @element = @parentElement.append \div
       ..attr \class \projev-selector
     years = d3.extent @projevy.map (.year)
     maxLength = d3.max @projevy.map (.text.length)
+    console.log maxLength
+    console.log @projevy.filter -> it.text.length == maxLength
     scale = d3.scale.linear!
       ..domain years
       ..range [0 100]
@@ -11,6 +24,10 @@ class ig.ProjevSelector
       ..domain [0 maxLength]
       ..range [7 60]
 
+    @popisky = @element.append \div .attr \class \popisky
+      .selectAll \div.popisek .data popisky .enter!append \div
+        ..attr \class \popisek
+        ..html -> it
     @list = @element.append \ol
       ..selectAll \li .data @projevy .enter!append \li
         ..style \left ~> "#{scale it.year}%"

@@ -4,7 +4,7 @@
     margin 0px
     padding 0px
     float left
-    width 100%
+    width 970px
     position absolute
     height 90px
     opacity 0.2
@@ -59,3 +59,41 @@
         top 38px
         .hover-point
           top 18px
+  .popisky
+    height 20px
+    position relative
+    opacity 0
+    transition opacity 0.4s
+    z-index 2
+    .popisek
+      position absolute
+      text-transform uppercase
+      font-size 0.8em
+      color #6
+      &:nth-child(1)
+        left 3px
+      &:nth-child(2)
+        left 78px
+      &:nth-child(3)
+        left 137px
+      &:nth-child(4)
+        left 301px
+      &:nth-child(5)
+        left 391px
+      &:nth-child(6)
+        left 615px
+      &:nth-child(7)
+        left 824px
+      &:nth-child(8)
+        right 0px
+        text-align right
+      &:nth-child(9)
+        z-index 2
+        top 110px
+        left 0px
+      &:nth-child(10)
+        top 100px
+        left 660px
+  &:hover .popisky
+    opacity 1
+
