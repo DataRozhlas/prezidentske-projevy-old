@@ -4,17 +4,22 @@ init = ->
     ..insert \div, '#wrapper'
       ..attr \id \bg-row
   container = d3.select '#wrapper-inner'
-  new ig.ProjevSelector container, data
-  projev = container.append \div
+  projevSelector = new ig.ProjevSelector container, data
+  projevContainer = container.append \div
     .attr \class \projev
-  projev.html '<h1>1956: Antonín Zápotocký</h1>
-    <h2>&bdquo;V zahajované druhé pětiletce stále kupředu – zpátky ni krok!&ldquo;</h2>'
-  content = container.append \div
+  projevHeader = projevContainer.append \div
+    .attr \class \projev-header
+  content = projevContainer.append \div
     ..attr \class \projev-content
-  (err, data) <~ d3.text "../data/1956-Zapotocky.txt"
-  paragraphs = data.split "\n\r"
-  content.selectAll \p .data paragraphs .enter!append \p
-    ..html -> it
+  projevSelector.on \selected (projev) ~>
+    projevHeader.html "<h1>#{projev.year}: #{projev.president.name}</h1>
+      <h2>&bdquo;V zahajované druhé pětiletce stále kupředu – zpátky ni krok!&ldquo;</h2>"
+    content.selectAll \p .remove!
+    content.selectAll \p .data projev.paragraphs .enter!append \p
+      ..html -> it
+    document.body.scrollTop = 0
+
+  projevSelector.setActive data.2
 if d3?
   init!
 else

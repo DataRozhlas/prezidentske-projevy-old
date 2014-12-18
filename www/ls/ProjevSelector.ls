@@ -12,6 +12,7 @@ popisky =
   "Klaus, Uhde"
 class ig.ProjevSelector
   (@parentElement, @projevy) ->
+    ig.Events @
     @element = @parentElement.append \div
       ..attr \class \projev-selector
     eleNode = @element.node!
@@ -29,19 +30,20 @@ class ig.ProjevSelector
         ..attr \class \popisek
         ..html -> it
     @list = @element.append \ol
-      ..selectAll \li .data @projevy .enter!append \li
-        ..style \left ~> "#{scale it.year}%"
-        ..classed \uhde ~> it.presId == "Uhde"
-        ..append \div
-          ..attr \class \hover-point
-          ..style \background-color ~> it.president.color
-        ..append \div
-          ..attr \class "point color"
-          ..style \background-color ~> it.president.color
-          ..style \height ~> "#{heightScale it.text.length}px"
-        ..append \div
-          ..attr \class "point gs"
-          ..style \background-color ~> it.president.gsColor
+    @listItems = @list.selectAll \li .data @projevy .enter!append \li
+      ..style \left ~> "#{scale it.year}%"
+      ..classed \uhde ~> it.presId == "Uhde"
+      ..append \div
+        ..attr \class \hover-point
+        ..style \background-color ~> it.president.color
+      ..append \div
+        ..attr \class "point color"
+        ..style \background-color ~> it.president.color
+        ..style \height ~> "#{heightScale it.text.length}px"
+      ..append \div
+        ..attr \class "point gs"
+        ..style \background-color ~> it.president.gsColor
+      ..on \click @~setActive
     padding = 40px
     offset = ig.utils.offset eleNode
     document.addEventListener \scroll ~>
@@ -56,3 +58,10 @@ class ig.ProjevSelector
           ..position = "absolute"
           ..top = "-9px"
           ..left = "0px"
+
+  setActive: (projev) ->
+    @listItems
+      .classed \active no
+      .filter (d, i) -> d is projev
+      .classed \active yes
+    @emit \selected projev

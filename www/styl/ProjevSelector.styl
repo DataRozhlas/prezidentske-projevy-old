@@ -35,6 +35,11 @@
         transition opacity 0.4s, transform 0.2s, height 0.4s
         &.gs
           opacity 0.8
+      &.active
+        opacity 1
+        .point.gs
+          opacity 1
+          background #ab0000 !important
       &:hover
         cursor pointer
         .hover-point
@@ -50,7 +55,7 @@
   &:hover
     height 155px
     .point.gs
-      opacity 0
+      opacity 0 !important
     .point.color
       border-radius 2px
     .hover-point
