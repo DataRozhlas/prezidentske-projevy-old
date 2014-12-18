@@ -5,6 +5,7 @@ popisky =
   "Svoboda"
   "Husák"
   "Havel"
+  "Havel"
   "Klaus"
   "Zeman"
   "Delší sloupec značí delší projev"
@@ -15,8 +16,6 @@ class ig.ProjevSelector
       ..attr \class \projev-selector
     years = d3.extent @projevy.map (.year)
     maxLength = d3.max @projevy.map (.text.length)
-    console.log maxLength
-    console.log @projevy.filter -> it.text.length == maxLength
     scale = d3.scale.linear!
       ..domain years
       ..range [0 100]
