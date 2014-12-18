@@ -14,7 +14,7 @@ class ig.ProjevSelector
   (@parentElement, @projevy) ->
     ig.Events @
     @element = @parentElement.append \div
-      ..attr \class \projev-selector
+      ..attr \class "projev-selector top"
     eleNode = @element.node!
     years = d3.extent @projevy.map (.year)
     maxLength = d3.max @projevy.map (.text.length)
@@ -53,11 +53,13 @@ class ig.ProjevSelector
           ..position = "fixed"
           ..top = "0px"
           ..left = "#{offset.left - 11}px"
+        eleNode.className = "projev-selector"
       else
         eleNode.style
           ..position = "absolute"
           ..top = "-9px"
           ..left = "0px"
+        eleNode.className = "projev-selector top"
 
   setActive: (projev) ->
     @listItems
