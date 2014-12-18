@@ -14,6 +14,7 @@ externalStyles =
 
 externalData =
   "style": "#__dirname/www/screen.css"
+  "projevy": "#__dirname/data/all.txt"
 
 preferScripts = <[ postInit.js _loadData.js ../data.js init.js _loadExternal.js]>
 deferScripts = <[ kandidatka.js base.js ]>

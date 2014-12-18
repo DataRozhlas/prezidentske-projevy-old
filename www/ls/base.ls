@@ -1,5 +1,5 @@
 init = ->
-
+  data = ig.getData!
   body = d3.select \body
     ..insert \div, '#wrapper'
       ..attr \id \bg-row
