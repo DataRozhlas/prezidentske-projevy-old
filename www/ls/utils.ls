@@ -1,7 +1,7 @@
 ig.utils = utils = {}
 
 
-utils.offset = (element, side) ->
+utils.offset = (element) ->
   top = 0
   left = 0
   do

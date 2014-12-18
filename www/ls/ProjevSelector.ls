@@ -14,6 +14,7 @@ class ig.ProjevSelector
   (@parentElement, @projevy) ->
     @element = @parentElement.append \div
       ..attr \class \projev-selector
+    eleNode = @element.node!
     years = d3.extent @projevy.map (.year)
     maxLength = d3.max @projevy.map (.text.length)
     scale = d3.scale.linear!
@@ -41,3 +42,17 @@ class ig.ProjevSelector
         ..append \div
           ..attr \class "point gs"
           ..style \background-color ~> it.president.gsColor
+    padding = 40px
+    offset = ig.utils.offset eleNode
+    document.addEventListener \scroll ~>
+      scroll = document.body.scrollTop - padding
+      if scroll > 0
+        eleNode.style
+          ..position = "fixed"
+          ..top = "0px"
+          ..left = "#{offset.left - 11}px"
+      else
+        eleNode.style
+          ..position = "absolute"
+          ..top = "-9px"
+          ..left = "0px"
