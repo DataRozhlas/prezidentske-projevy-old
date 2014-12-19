@@ -32,6 +32,8 @@ init = ->
   content = projevContainer.append \div
     .attr \class \projev-content
   projevSelector.on \selected (projev) ~>
+    projevContainer.classed \fading yes
+    <~ setTimeout _, 300
     currentProjevIndex := data.indexOf projev
     leftArrow.classed \disabled currentProjevIndex == 0
     rightArrow.classed \disabled currentProjevIndex == data.length - 1
@@ -42,6 +44,7 @@ init = ->
     content.selectAll \p .data projev.paragraphs .enter!append \p
       ..html -> it
     document.body.scrollTop = 0
+    projevContainer.classed \fading no
 
   projevSelector.setActive data.2
   new ig.ScrollWatch projevSelector, leftArrow, rightArrow
