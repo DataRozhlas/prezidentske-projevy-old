@@ -46,8 +46,10 @@ init = ->
     document.body.scrollTop = 0
     projevContainer.classed \fading no
 
-  projevSelector.setActive data.2
+  projevSelector.setActive data.41
   new ig.ScrollWatch projevSelector, leftArrow, rightArrow
+  new ig.Player
+
 if d3?
   init!
 else

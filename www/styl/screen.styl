@@ -1,6 +1,11 @@
 @import colors
 @import prefixes
 @import 'components/triangle'
+@keyframes rotate
+  from
+    transform rotate(0deg)
+  to
+    transform rotate(360deg)
 body
   background white !important
 #wrapper #nav-sub ul.sub
@@ -59,6 +64,46 @@ body
       margin 1em 0px
       &:first-of-type
         text-indent 0px
+      span[data-play-start]
+        border-bottom 1px dotted ColorHeading
+        position relative
+        &:hover
+          cursor pointer
+        &:before
+          display block
+          background ColorHeading
+          content: "▶"
+          left -30px
+          top 1px
+          font-size 12px
+          width 26px
+          height @width
+          line-height 20px
+          text-align center
+          border-radius 50%
+          position absolute
+          text-indent 0
+          color white
+          opacity 0
+          padding-left 2px
+          transition opacity 0.4s
+          border 3px solid white
+        &:hover:before
+          opacity 1
+        &.loading:before
+          font-family arial
+          content: "◦"
+          font-size 23px
+          text-align right
+          animation rotate 2s infinite linear
+        &.playing:before
+          font-size 6px
+          padding-left 2px
+          content: "▌▌"
+        &.loading:before
+        &.playing:before
+          opacity 1
+
   .medailon
     position absolute
     top 0px
