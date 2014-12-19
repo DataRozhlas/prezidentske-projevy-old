@@ -1,0 +1,136 @@
+.projev-selector
+  position absolute
+  width 980px
+  height 60px
+  background linear-gradient(to top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.98) 7px,rgba(255,255,255,0.98) 100%);
+  top -9px
+  left 18px
+  padding-top 9px
+  transition height 0.4s
+  z-index 2
+  &.top
+    background transparent
+  ol
+    list-style-type none
+    margin 0px
+    padding 0px
+    float left
+    width 970px
+    position absolute
+    height 27px
+    li
+      box-sizing content-box
+      display block
+      width 14px
+      height 90px
+      top 0px
+      position absolute
+      transition top 0.2s, opacity 0.4s
+      opacity 0.2
+      .point
+        box-sizing content-box
+        position absolute
+        top 3px
+        left 3px
+        width 7px
+        height 7px
+        border-radius 50%
+        transition opacity 0.4s, transform 0.2s, height 0.4s
+        &.gs
+          opacity 0.8
+      .year
+        position absolute
+        top -19px
+        left -35px
+        width 80px
+        text-align center
+        font-size 0.72em
+        opacity 0
+        color #6
+        z-index 2
+        background linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 20%,rgba(255,255,255,1) 80%,rgba(255,255,255,0) 100%);
+      &.active
+        opacity 1
+        .point.gs
+          opacity 1
+          background #ab0000 !important
+      &:hover
+        cursor pointer
+        .point
+          opacity 0.5
+        .year
+          opacity 1
+      &.uhde
+        .point
+          top 14px
+        .year
+          top -57px
+  &:not(:hover)
+    .point.color
+      height 7px !important
+  &:hover
+    height 155px
+    .point.gs
+      opacity 0 !important
+    .point.color
+      border-radius 2px
+    li
+      opacity 1 !important
+    li.uhde
+      top 38px
+  .popisky
+    height 19px
+    position relative
+    opacity 0
+    transition opacity 0.4s
+    z-index 2
+    .popisek
+      position absolute
+      text-transform uppercase
+      font-size 0.72em
+      color #6
+      &:nth-child(1)
+        left 3px
+        width 67px
+        text-align center
+      &:nth-child(2)
+        left 74px
+      &:nth-child(3)
+        left 137px
+        width 157px
+        text-align center
+      &:nth-child(4)
+        width 82px
+        left 301px
+        text-align center
+      &:nth-child(5)
+        left 391px
+        width 216px
+        text-align center
+      &:nth-child(6)
+        left 615px
+        width 37px
+        text-align center
+      &:nth-child(7)
+        left 674px
+        width 142px
+        text-align center
+      &:nth-child(8)
+        left 824px
+        width 142px
+        text-align center
+      &:nth-child(9)
+        right -14px
+        text-align right
+      &:nth-child(10)
+        z-index 2
+        top 100px
+        right -14px
+      &:nth-child(11)
+        top 100px
+        left 660px
+  &:hover .popisky
+    opacity 1
+
+  &.top .popisky .popisek:nth-child(10)
+    top 60px !important
