@@ -15,7 +15,6 @@ class ig.ProjevSelector
     ig.Events @
     @element = @parentElement.append \div
       ..attr \class "projev-selector top"
-    eleNode = @element.node!
     years = d3.extent @projevy.map (.year)
     maxLength = d3.max @projevy.map (.text.length)
     scale = d3.scale.linear!
@@ -44,22 +43,6 @@ class ig.ProjevSelector
         ..attr \class "point gs"
         ..style \background-color ~> it.president.gsColor
       ..on \click @~setActive
-    padding = 40px
-    offset = ig.utils.offset eleNode
-    document.addEventListener \scroll ~>
-      scroll = document.body.scrollTop - padding
-      if scroll > 0
-        eleNode.style
-          ..position = "fixed"
-          ..top = "0px"
-          ..left = "#{offset.left - 11}px"
-        eleNode.className = "projev-selector"
-      else
-        eleNode.style
-          ..position = "absolute"
-          ..top = "-9px"
-          ..left = "0px"
-        eleNode.className = "projev-selector top"
 
   setActive: (projev) ->
     @listItems
