@@ -38,6 +38,17 @@
         transition opacity 0.4s, transform 0.2s, height 0.4s
         &.gs
           opacity 0.8
+      .year
+        position absolute
+        top -19px
+        left -35px
+        width 80px
+        text-align center
+        font-size 0.72em
+        opacity 0
+        color #6
+        z-index 2
+        background linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 20%,rgba(255,255,255,1) 80%,rgba(255,255,255,0) 100%);
       &.active
         opacity 1
         .point.gs
@@ -45,13 +56,15 @@
           background #ab0000 !important
       &:hover
         cursor pointer
-        .hover-point
-          top -5px
+        .point
+          opacity 0.6
+        .year
+          opacity 1
       &.uhde
         .point
           top 14px
-        &:hover .hover-point
-          top 5px !important
+        .year
+          top -57px
   &:not(:hover)
     .point.color
       height 7px !important
@@ -61,22 +74,12 @@
       opacity 0 !important
     .point.color
       border-radius 2px
-    .hover-point
-      position absolute
-      top 3px
-      width 7px
-      height 14px
-      left 3px
-      border-radius 2px
-      transition top 0.2s
     li
-      opacity 1
+      opacity 1 !important
     li.uhde
       top 38px
-      .hover-point
-        top 18px
   .popisky
-    height 23px
+    height 19px
     position relative
     opacity 0
     transition opacity 0.4s

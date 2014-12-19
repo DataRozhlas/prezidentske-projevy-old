@@ -33,15 +33,15 @@ class ig.ProjevSelector
       ..style \left ~> "#{scale it.year}%"
       ..classed \uhde ~> it.presId == "Uhde"
       ..append \div
-        ..attr \class \hover-point
-        ..style \background-color ~> it.president.color
-      ..append \div
         ..attr \class "point color"
         ..style \background-color ~> it.president.color
         ..style \height ~> "#{heightScale it.text.length}px"
       ..append \div
         ..attr \class "point gs"
         ..style \background-color ~> it.president.gsColor
+      ..append \span
+        ..attr \class "year"
+        ..html ~> it.year
       ..on \click @~setActive
 
   setActive: (projev) ->
