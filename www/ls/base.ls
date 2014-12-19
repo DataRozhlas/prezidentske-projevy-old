@@ -38,7 +38,7 @@ init = ->
     leftArrow.classed \disabled currentProjevIndex == 0
     rightArrow.classed \disabled currentProjevIndex == data.length - 1
     projevHeader.html "<h1>#{projev.year}: #{projev.president.name}</h1>
-      <h2>&bdquo;V zahajované druhé pětiletce stále kupředu – zpátky ni krok!&ldquo;</h2>"
+      <h2>&bdquo;Možná se ptáte, o jaké republice sním&ldquo;</h2>"
     medailon.attr \src "./img/#{projev.president.id}.png"
     content.selectAll \p .remove!
     content.selectAll \p .data projev.paragraphs .enter!append \p
