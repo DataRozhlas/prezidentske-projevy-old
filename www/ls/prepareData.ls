@@ -26,6 +26,15 @@ ig.getData = ->
     [year, presId] = source.split "-"
     president = presidents[presId]
     year = parseInt year, 10
+    text = improveTypography text
     [title, ...paragraphs] = text.split /(\n\n)|(\n\r\n\r)|(\r\n\r\n)/
       .filter -> it and it.0 not in ["\n" "\r"]
     {text, title, paragraphs, president, presId, year}
+
+improveTypography = (text) ->
+  text
+    .replace /(\s(s|z|v|k)) /g '$1&nbsp;'
+    .replace /([\.\s])"/g "$1„"
+    .replace /"([\.\s])/g "$1“"
+    .replace /(\s)-(\s)/g "&nbsp;–&nbsp;"
+    .replace /(\s)--(\s)/g "&nbsp;—&nbsp;"
