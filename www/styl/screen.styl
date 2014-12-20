@@ -33,7 +33,11 @@ body
 @import ProjevSelector
 #wrapper-inner
   font-family 'PT Serif', sans-serif
-  position relative
+  position relative !important
+  *,
+  *:before,
+  *:after
+    box-sizing border-box
   .projev
     position relative
     margin-left 50px
@@ -120,6 +124,7 @@ body
     height 100px
     width 60px
     padding-top 25px
+    line-height 19px
     color black
     opacity 0.1
     transition opacity 0.4s

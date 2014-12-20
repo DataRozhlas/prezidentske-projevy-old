@@ -6,6 +6,7 @@ init = ->
     ..insert \div, '#wrapper'
       ..attr \id \bg-row
   container = d3.select '#wrapper-inner'
+    ..html ''
   projevSelector = new ig.ProjevSelector container, data
   projevContainer = container.append \div
     .attr \class \projev
@@ -55,7 +56,7 @@ init = ->
       <~ setTimeout _, 300
       showProjev projev
 
-  projevSelector.setActive data.2
+  projevSelector.setActive data.41
   new ig.ScrollWatch projevSelector, leftArrow, rightArrow
   new ig.Player
 
