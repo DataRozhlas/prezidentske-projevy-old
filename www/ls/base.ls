@@ -1,5 +1,6 @@
 init = ->
   currentProjevIndex = null
+  firstLoad = yes
   data = ig.getData!
   body = d3.select \body
     ..insert \div, '#wrapper'
@@ -31,9 +32,8 @@ init = ->
 
   content = projevContainer.append \div
     .attr \class \projev-content
-  projevSelector.on \selected (projev) ~>
-    projevContainer.classed \fading yes
-    <~ setTimeout _, 300
+
+  showProjev = (projev) ->
     currentProjevIndex := data.indexOf projev
     leftArrow.classed \disabled currentProjevIndex == 0
     rightArrow.classed \disabled currentProjevIndex == data.length - 1
@@ -45,6 +45,15 @@ init = ->
       ..html -> it
     document.body.scrollTop = 0
     projevContainer.classed \fading no
+
+  projevSelector.on \selected (projev) ~>
+    projevContainer.classed \fading yes
+    if firstLoad
+      showProjev projev
+      firstLoad := no
+    else
+      <~ setTimeout _, 300
+      showProjev projev
 
   projevSelector.setActive data.41
   new ig.ScrollWatch projevSelector, leftArrow, rightArrow
