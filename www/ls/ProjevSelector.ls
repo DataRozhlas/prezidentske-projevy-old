@@ -39,6 +39,7 @@ class ig.ProjevSelector
       ..append \div
         ..attr \class "point gs"
         ..style \background-color ~> it.president.gsColor
+        ..style \height ~> "#{heightScale it.text.length}px"
       ..append \span
         ..attr \class "year"
         ..html ~> it.year

@@ -65,19 +65,33 @@
           top 14px
         .year
           top -57px
-  &:not(:hover)
-    .point.color
+  &:not(:hover):not(.top)
+    .point
       height 7px !important
   &:hover
+  &.top
     height 155px
     .point.gs
       opacity 0 !important
-    .point.color
+    .point
       border-radius 2px
-    li
-      opacity 1 !important
     li.uhde
       top 38px
+  &.top
+    li
+      opacity 0.4 !important
+    li.active
+      opacity 0.9 !important
+  &:hover
+    li
+      opacity 1 !important
+  &.top
+    .point.gs
+      opacity 1 !important
+    &:hover
+      .point.gs
+        opacity 0 !important
+
   .popisky
     height 19px
     position relative
@@ -130,6 +144,7 @@
         top 100px
         left 660px
   &:hover .popisky
+  &.top .popisky
     opacity 1
 
   &.top .popisky .popisek:nth-child(10)
