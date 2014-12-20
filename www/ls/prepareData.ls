@@ -26,6 +26,6 @@ ig.getData = ->
     [year, presId] = source.split "-"
     president = presidents[presId]
     year = parseInt year, 10
-    paragraphs = text.split "\n"
-      .filter -> it.length > 1
-    {text, paragraphs, president, presId, year}
+    [title, ...paragraphs] = text.split /(\n\n)|(\n\r\n\r)|(\r\n\r\n)/
+      .filter -> it and it.0 not in ["\n" "\r"]
+    {text, title, paragraphs, president, presId, year}

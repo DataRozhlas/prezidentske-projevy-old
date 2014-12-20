@@ -38,7 +38,7 @@ init = ->
     leftArrow.classed \disabled currentProjevIndex == 0
     rightArrow.classed \disabled currentProjevIndex == data.length - 1
     projevHeader.html "<h1>#{projev.year}: #{projev.president.name}</h1>
-      <h2>&bdquo;Možná se ptáte, o jaké republice sním&ldquo;</h2>"
+      <h2>&bdquo;#{projev.title}&ldquo;</h2>"
     medailon.attr \src "./img/#{projev.president.id}.png"
     content.selectAll \p .remove!
     content.selectAll \p .data projev.paragraphs .enter!append \p
@@ -55,7 +55,7 @@ init = ->
       <~ setTimeout _, 300
       showProjev projev
 
-  projevSelector.setActive data.41
+  projevSelector.setActive data.2
   new ig.ScrollWatch projevSelector, leftArrow, rightArrow
   new ig.Player
 
