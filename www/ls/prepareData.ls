@@ -34,7 +34,7 @@ ig.getData = ->
 improveTypography = (text) ->
   text
     .replace /(\s(s|z|v|k)) /g '$1&nbsp;'
-    .replace /([\.\s])"/g "$1„"
-    .replace /"([\.\s])/g "$1“"
+    # .replace /([\.\s])"/g "$1„"
+    # .replace /"([\.\s])/g "$1“"
     .replace /(\s)-(\s)/g "&nbsp;–&nbsp;"
     .replace /(\s)--(\s)/g "&nbsp;—&nbsp;"

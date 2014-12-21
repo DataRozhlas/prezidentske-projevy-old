@@ -49,6 +49,7 @@ init = ->
 
   projevSelector.on \selected (projev) ~>
     projevContainer.classed \fading yes
+    player.setSrc "../audio/1990-Havel.mp3"
     if firstLoad
       showProjev projev
       firstLoad := no
@@ -56,9 +57,9 @@ init = ->
       <~ setTimeout _, 300
       showProjev projev
 
+  player = new ig.Player projevContainer
   projevSelector.setActive data.41
   new ig.ScrollWatch projevSelector, leftArrow, rightArrow
-  new ig.Player
 
 if d3?
   init!

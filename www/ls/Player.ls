@@ -1,36 +1,81 @@
 class ig.Player
-  ->
+  (@parentElement) ->
+    self = @
+    @element = @parentElement.append \div
+      ..attr \class "player"
+    @playBtn = @element.append \div
+      ..attr \class "button play"
+      ..html "▶"
+      ..on \click @~onPlay
+    @pauseBtn = @element.append \div
+      ..attr \class "button pause"
+      ..html "▌▌"
+      ..on \click @~onPause
+
+    @loadingBtn = @element.append \div
+      ..attr \class "button loading"
+      ..html "◌"
+    @progress = @element.append \div
+      ..attr \class \progress
+      ..on \click ->
+        return unless self.duration
+        offset = ig.utils.offset @
+        left = d3.event.x - offset.left
+        perc = left / @offsetWidth
+        self.onTimeRequested perc * self.duration
+      ..on \mousedown -> d3.event.preventDefault!
+      ..append \div
+        ..attr \class \line
+    @progressPoint = @progress.append \div
+      ..attr \class \point
+      ..style \left \0px
+    @duration = null
+    @timeLimit = null
+    @setListeners!
+    @audioElement = document.createElement \audio
+      ..addEventListener \canplay ~>
+        @element.attr \class "player paused"
+        @updateProgress 0
+      ..addEventListener \playing ~>
+        @element.attr \class "player playing"
+      ..addEventListener \durationchange (evt) ~>
+        @duration = @audioElement.duration
+      ..addEventListener \timeupdate ~>
+        if @timeLimit and @audioElement.currentTime > @timeLimit
+          @timeLimit = null
+          @onPause!
+        @updateProgress @audioElement.currentTime
+      ..addEventListener \waiting ~>
+        @element.attr \class "player loading"
+
+  updateProgress: (time) ->
+    return if not @duration
+    @progressPoint.style \left "#{100 * time / @duration}%"
+
+  onTimeRequested: (time) ->
+    @timeLimit = null
+    @audioElement.currentTime = time
+
+  onPlay: ->
+    @audioElement.play!
+    @element.attr \class "player playing"
+
+  onPause: ->
+    @audioElement.pause!
+    @element.attr \class "player paused"
+
+  setSrc: (src) ->
+    @audioElement.src = src
+    @element.classed \loading yes
+
+  setListeners: ->
     document.addEventListener "click" ({target}:evt) ~>
       start = target.getAttribute "data-play-start"
       end = target.getAttribute "data-play-end"
       if start isnt null and end isnt null
-        if target.className == "playing"
-          target.className = "paused"
-          audio = target.querySelector "audio"
-          audio.pause!
-        else if target.className == "paused"
-          target.className = "playing"
-          audio = target.querySelector "audio"
-          @pauseOtherAudios!
-          audio.play!
-        else
-          target.className = "loading"
-          start = parseFloat start
-          end = parseFloat end
-          audio = document.createElement "audio"
-            ..src = "../audio/1990-Havel.mp3"
-          audio.currentTime = start
-          target.appendChild audio
-          audio.addEventListener \canplay ~>
-            @pauseOtherAudios!
-            target.className = "playing"
-            audio.play!
-          audio.addEventListener \timeupdate ->
-            if audio and audio.currentTime > end
-              audio.pause!
-              target.className = ""
-              target.removeChild audio
-              audio := null
+        @onTimeRequested start
+        @onPlay!
+        @timeLimit = end
 
   pauseOtherAudios: ->
     audios = document.querySelectorAll "audio"
