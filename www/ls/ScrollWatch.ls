@@ -36,7 +36,7 @@ class ig.ScrollWatch
       @leftArrowElm.style
         ..position = 'fixed'
         ..top = "128px"
-        ..left = "#{@projevOffset.left - 0}px"
+        ..left = "#{@projevOffset.left - 10}px"
       @rightArrowElm.style
         ..position = 'fixed'
         ..top = "128px"
@@ -45,7 +45,7 @@ class ig.ScrollWatch
       @leftArrowElm.style
         ..position = 'absolute'
         ..top = "31px"
-        ..left = "-60px"
+        ..left = "-70px"
       @rightArrowElm.style
         ..position = 'absolute'
         ..top = "31px"

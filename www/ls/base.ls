@@ -34,6 +34,11 @@ init = ->
   content = projevContainer.append \div
     .attr \class \projev-content
 
+  makeLinkFb = (projev, paragraphId) ->
+    window.location + '%23' + projev.year + '-' + (paragraphId + 1)
+  makeLinkTw = (projev, paragraphId) ->
+    link = window.location + '%23' + projev.year + '-' + (paragraphId + 1)
+    link + " " + projev.paragraphs[paragraphId]
   showProjev = (projev) ->
     currentProjevIndex := data.indexOf projev
     leftArrow.classed \disabled currentProjevIndex == 0
@@ -45,6 +50,19 @@ init = ->
     content.selectAll \p .data projev.paragraphs .enter!append \p
       ..html -> it
       ..attr \id (d, i) ~> "para-#{i + 1}"
+      ..append \a
+        ..append \img
+          ..attr \src 'https://samizdat.cz/tools/icons/facebook-bg.svg'
+        ..attr \class "share facebook"
+        ..attr \href (d, i) ~> "https://www.facebook.com/sharer/sharer.php?u=#{makeLinkFb projev, i}"
+        ..attr \target \_blank
+      ..append \a
+        ..append \img
+          ..attr \src 'https://samizdat.cz/tools/icons/twitter-bg.svg'
+        ..attr \class "share twitter"
+        ..attr \href (d, i) ~> "https://twitter.com/home?status=#{makeLinkTw projev, i}"
+        ..attr \target \_blank
+
     document.body.scrollTop = 0
     projevContainer.classed \fading no
 

@@ -32,9 +32,10 @@ ig.getData = ->
     {text, title, paragraphs, president, presId, year}
 
 improveTypography = (text) ->
+  nbsp = String.fromCharCode 160
   text
-    .replace /(\s(s|z|v|k)) /g '$1&nbsp;'
+    .replace /(\s(s|z|v|k)) /g '$1' + nbsp
     # .replace /([\.\s])"/g "$1„"
     # .replace /"([\.\s])/g "$1“"
-    .replace /(\s)-(\s)/g "&nbsp;–&nbsp;"
-    .replace /(\s)--(\s)/g "&nbsp;—&nbsp;"
+    .replace /(\s)-(\s)/g "#{nbsp}–#{nbsp}"
+    .replace /(\s)--(\s)/g "#{nbsp}—#{nbsp}"

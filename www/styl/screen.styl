@@ -68,6 +68,7 @@ body
       text-indent 2em
       margin 1em 0px
       white-space pre-line
+      position relative
       &:first-of-type
         text-indent 0px
       span
@@ -111,6 +112,39 @@ body
         &.loading:before
         &.playing:before
           opacity 1
+      a.share
+        z-index 1
+        position absolute
+        left -70px
+        display block
+        width 70px
+        height 60px
+        background-repeat no-repeat
+        background-size contain
+        background-position left top
+        background-color white
+        position absolute
+        img
+          transition opacity 0.2s
+          opacity 0
+          position absolute
+          top 0px
+          left 0px
+          width 40px
+          height auto
+        &.facebook
+          top -5px
+        &.twitter
+          top 55px
+      &:hover
+        a.share
+          z-index 4
+          img
+            opacity 0.12
+          &:hover
+            cursor pointer
+            img
+              opacity 0.6
 
   .medailon
     position absolute
@@ -132,8 +166,10 @@ body
     opacity 0.1
     transition opacity 0.4s
     &.left
-      left -60px
+      left -70px
+      padding-left 10px
       text-align left
+      z-index 3
     &.right
       right -60px
       text-align right
