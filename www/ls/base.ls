@@ -63,7 +63,17 @@ init = ->
         ..attr \href (d, i) ~> "https://twitter.com/home?status=#{makeLinkTw projev, i}"
         ..attr \target \_blank
 
-    document.body.scrollTop = 0
+    [_, highlightedParagraph] = window.location.hash.split "-"
+    highlightedParagraph = parseInt highlightedParagraph
+    if highlightedParagraph
+      highlightedElement = content.select "p:nth-child(#highlightedParagraph)"
+        ..attr \class \highlighted
+      {top} = ig.utils.offset highlightedElement.node!
+      top -= window.innerHeight / 2
+      top = 0 if top < 0
+      document.body.scrollTop = top
+    else
+      document.body.scrollTop = 0
     projevContainer.classed \fading no
 
   projevSelector.on \selected (projev) ~>
@@ -74,12 +84,27 @@ init = ->
       firstLoad := no
     else
       <~ setTimeout _, 300
+      if projev.year.toString! != window.location.hash.substr 1, 4
+        window.location.hash = projev.year
       showProjev projev
 
   player = new ig.Player projevContainer
-  projevSelector.setActive data.50
+
+  showHash = (hash) ->
+    [year, paragraph] = hash.split "-"
+    year = parseInt year
+    [projev] = data.filter -> it.year == year
+    return unless projev
+    projevSelector.setActive projev
+
+  if window.location.hash
+    showHash window.location.hash.substr 1
+  else
+    showHash "1990"
+
   new ig.ScrollWatch projevSelector, leftArrow, rightArrow, player
 
+  window.onhashchange = -> showHash window.location.hash.substr 1
 if d3?
   init!
 else
