@@ -1,3 +1,5 @@
+predlozky = <[bez beze blízko během cestou coby dle do dík díky k ke kol kolem krom kromě ku kvůli mezi mimo místo na nad nade naproti navzdory o ob od ode ohledně okolo oproti po poblíž pod pode podle podlevá podlivá podél pomocí pro prostřednictvím proti před přede přes přese při s skrz skrze stran u u uprostřed v ve vedle vinou vně vstříc vz včetně vůkol vůči z za ze zkraje zpod a v i]>
+
 class President
   (@name, @color, @id) ->
     r = parseInt (@color.substr 1, 2), 16
@@ -33,8 +35,10 @@ ig.getData = ->
 
 improveTypography = (text) ->
   nbsp = String.fromCharCode 160
+  console.log "(\\s(#{predlozky.join '|'})) "
+  predlozkyRegex = new RegExp "(\\s(#{predlozky.join '|'})) " "g"
   text
-    .replace /(\s(s|z|v|k)) /g '$1' + nbsp
+    .replace predlozkyRegex, '$1' + nbsp
     # .replace /([\.\s])"/g "$1„"
     # .replace /"([\.\s])/g "$1“"
     .replace /(\s)-(\s)/g "#{nbsp}–#{nbsp}"
