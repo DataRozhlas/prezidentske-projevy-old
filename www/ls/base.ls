@@ -59,7 +59,7 @@ init = ->
 
   player = new ig.Player projevContainer
   projevSelector.setActive data.41
-  new ig.ScrollWatch projevSelector, leftArrow, rightArrow
+  new ig.ScrollWatch projevSelector, leftArrow, rightArrow, player
 
 if d3?
   init!

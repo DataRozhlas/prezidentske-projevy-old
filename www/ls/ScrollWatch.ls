@@ -1,8 +1,9 @@
 class ig.ScrollWatch
-  (@projevSelector, @leftArrow, @rightArrow) ->
+  (@projevSelector, @leftArrow, @rightArrow, @player) ->
     @leftArrowElm = @leftArrow.node!
     @rightArrowElm = @rightArrow.node!
     @eleNode = @projevSelector.element.node!
+    @playerNode = @player.element.node!
     @projevOffset = ig.utils.offset @projevSelector.parentElement.node!
     window.addEventListener \resize @onResize
     document.addEventListener \scroll @onScroll
@@ -14,6 +15,20 @@ class ig.ScrollWatch
   onScroll: ~>
     @onScrollProjev!
     @onScrollArrows!
+    @onScrollPlayer!
+
+  onScrollPlayer: ->
+    scroll = document.body.scrollTop - 192px
+    if scroll > 0
+      @playerNode.style
+        ..position = 'fixed'
+        ..top = '143px'
+        ..left = "#{@projevOffset.left + 742}px"
+    else
+      @playerNode.style
+        ..position = 'absolute'
+        ..top = '200px'
+        ..left = "auto"
 
   onScrollArrows: ->
     scroll = document.body.scrollTop - 40px
