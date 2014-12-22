@@ -73,9 +73,13 @@ class ig.Player
       start = target.getAttribute "data-play-start"
       end = target.getAttribute "data-play-end"
       if start isnt null and end isnt null
-        @onTimeRequested start
+        [startSeconds, startMinutes] = start.split ":" .reverse!map parseFloat
+        [endSeconds, endMinutes] = end.split ":" .reverse!map parseFloat
+        startMinutes = startMinutes || 0
+        endMinutes = endMinutes || 0
+        @onTimeRequested startSeconds + startMinutes * 60
         @onPlay!
-        @timeLimit = end
+        @timeLimit = endSeconds + endMinutes * 60
 
   pauseOtherAudios: ->
     audios = document.querySelectorAll "audio"
