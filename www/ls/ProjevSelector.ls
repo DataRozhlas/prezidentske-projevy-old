@@ -10,12 +10,15 @@ popisky =
   "Zeman"
   "Delší sloupec značí delší projev"
   "Klaus, Uhde"
+  "Masaryk"
+  "Beneš"
 class ig.ProjevSelector
   (@parentElement, @projevy) ->
     ig.Events @
     @element = @parentElement.append \div
       ..attr \class "projev-selector top"
     years = d3.extent @projevy.map (.year)
+      ..0 += 4.6 # posuny
     maxLength = d3.max @projevy.map (.text.length)
     scale = d3.scale.linear!
       ..domain years
@@ -30,7 +33,15 @@ class ig.ProjevSelector
         ..html -> it
     @list = @element.append \ol
     @listItems = @list.selectAll \li .data @projevy .enter!append \li
-      ..style \left ~> "#{scale it.year}%"
+      ..style \left ~>
+        y = it.year
+        if y < 1949
+          y += 3.2
+        if it.year < 1938
+          y += 1.2
+        if it.year < 1935
+          y += 0.2
+        "#{scale y}%"
       ..classed \uhde ~> it.presId == "Uhde"
       ..append \div
         ..attr \class "point color"
