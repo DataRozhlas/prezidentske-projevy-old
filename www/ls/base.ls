@@ -44,6 +44,7 @@ init = ->
     content.selectAll \p .remove!
     content.selectAll \p .data projev.paragraphs .enter!append \p
       ..html -> it
+      ..attr \id (d, i) ~> "para-#{i + 1}"
     document.body.scrollTop = 0
     projevContainer.classed \fading no
 
