@@ -70,9 +70,15 @@ body
       white-space pre-line
       position relative
       &:first-of-type
+      &.bad-transcript:nth-child(2)
         text-indent 0px
       &.highlighted
         background #ffb
+      &.bad-transcript:first-child
+        line-height 1.1em
+        font-size 0.9em
+        color #6
+        font-style italic
       span
         border-bottom 5px solid red
       span[data-play-start]
