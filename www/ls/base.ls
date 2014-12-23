@@ -88,7 +88,7 @@ init = ->
 
   projevSelector.on \selected (projev) ~>
     projevContainer.classed \fading yes
-    player.setSrc "../audio/1990-Havel.mp3"
+    player.setSrc "../audio/#{projev.year}-#{projev.president.id}.mp3"
     if firstLoad
       showProjev projev
       firstLoad := no

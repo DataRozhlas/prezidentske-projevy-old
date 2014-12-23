@@ -80,6 +80,8 @@ class ig.Player
         @onTimeRequested startSeconds + startMinutes * 60
         @onPlay!
         @timeLimit = endSeconds + endMinutes * 60
+        console.log "Start", startMinutes, startSeconds,  startSeconds + startMinutes * 60
+        console.log "End", endMinutes, endSeconds,  endSeconds + endMinutes * 60
 
   pauseOtherAudios: ->
     audios = document.querySelectorAll "audio"
