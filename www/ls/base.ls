@@ -10,21 +10,31 @@ init = ->
   projevSelector = new ig.ProjevSelector container, data
   projevContainer = container.append \div
     .attr \class \projev
+
+  showNextProjev = ->
+    return if currentProjevIndex == data.length - 1
+    projevSelector.setActive data[currentProjevIndex + 1]
+
+  showPrevProjev = ->
+    return if currentProjevIndex == 0
+    projevSelector.setActive data[currentProjevIndex - 1]
+
+  window.addEventListener \keydown ({keyCode}) ->
+    switch keyCode
+    | 37 => showPrevProjev!
+    | 39 => showNextProjev!
+
   leftArrow = projevContainer.append \span
     ..attr \title "Předchozí projev"
     ..attr \class "arrow left"
     ..html "‹"
-    ..on \click ~>
-      return if currentProjevIndex == 0
-      projevSelector.setActive data[currentProjevIndex - 1]
+    ..on \click showPrevProjev
 
   rightArrow = projevContainer.append \span
     ..attr \title "Další projev"
     ..attr \class "arrow right"
     ..html "›"
-    ..on \click ~>
-      return if currentProjevIndex == data.length - 1
-      projevSelector.setActive data[currentProjevIndex + 1]
+    ..on \click showNextProjev
   projevHeader = projevContainer.append \div
     .attr \class \projev-header
   medailon = projevContainer.append \img
