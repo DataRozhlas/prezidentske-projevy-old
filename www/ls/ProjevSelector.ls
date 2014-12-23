@@ -52,8 +52,13 @@ class ig.ProjevSelector
         ..style \background-color ~> it.president.gsColor
         ..style \height ~> "#{heightScale it.text.length}px"
       ..append \span
-        ..attr \class "year"
-        ..html ~> it.year
+        ..attr \class "item-popisek"
+        ..append \span
+          ..attr \class \president
+          ..html ~> it.president.name.split " " .pop!
+        ..append \span
+          ..attr \class \year
+          ..html ~> it.year
       ..on \click @~setActive
 
   setActive: (projev) ->
