@@ -45,9 +45,10 @@ init = ->
     .attr \class \projev-content
 
   makeLinkFb = (projev, paragraphId) ->
-    window.location + '%23' + projev.year + '-' + (paragraphId + 1)
+    [nonHash] = window.location.toString!.split '#'
+    nonHash + '%23' + projev.year + '-' + projev.president.id + '-' + (paragraphId + 1)
   makeLinkTw = (projev, paragraphId) ->
-    link = window.location + '%23' + projev.year + '-' + (paragraphId + 1)
+    link = makeLinkFb projev, paragraphId
     link + " " + projev.paragraphs[paragraphId]
   showProjev = (projev) ->
     currentProjevIndex := data.indexOf projev
@@ -73,7 +74,7 @@ init = ->
         ..attr \href (d, i) ~> "https://twitter.com/home?status=#{makeLinkTw projev, i}"
         ..attr \target \_blank
 
-    [_, highlightedParagraph] = window.location.hash.split "-"
+    [_, _, highlightedParagraph] = window.location.hash.split "-"
     highlightedParagraph = parseInt highlightedParagraph
     if highlightedParagraph
       highlightedElement = content.select "p:nth-child(#highlightedParagraph)"
@@ -94,23 +95,24 @@ init = ->
       firstLoad := no
     else
       <~ setTimeout _, 300
-      if projev.year.toString! != window.location.hash.substr 1, 4
-        window.location.hash = projev.year
+      id = projev.year + "-" + projev.president.id
+      if id != window.location.hash.substr 1, id.length
+        window.location.hash = id
       showProjev projev
 
   player = new ig.Player projevContainer
 
   showHash = (hash) ->
-    [year, paragraph] = hash.split "-"
+    [year, presidentId] = hash.split "-"
     year = parseInt year
-    [projev] = data.filter -> it.year == year
+    [projev] = data.filter -> it.year == year and it.president.id == presidentId
     return unless projev
     projevSelector.setActive projev
 
   if window.location.hash
     showHash window.location.hash.substr 1
   else
-    showHash "1990"
+    showHash "1990-havel"
 
   new ig.ScrollWatch projevSelector, leftArrow, rightArrow, player
 

@@ -19,6 +19,7 @@ presidents =
   Klaus: new President "Václav Klaus", '#377eb8', \klaus
   Zeman: new President "Miloš Zeman", '#f781bf', \zeman
   Uhde: new President "Milan Uhde", '#984ea3', \uhde
+  Hacha: new President "Emil Hácha", '#a65628', \hacha
 
 ig.getData = ->
   rs = String.fromCharCode 30
