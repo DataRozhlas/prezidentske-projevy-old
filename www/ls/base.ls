@@ -88,7 +88,7 @@ init = ->
 
   projevSelector.on \selected (projev) ~>
     projevContainer.classed \fading yes
-    player.setSrc "../audio/#{projev.year}-#{projev.president.id}.mp3"
+    player.setSrc "https://samizdat.blob.core.windows.net/projevy/#{projev.year}-#{projev.president.id}.mp3"
     if firstLoad
       showProjev projev
       firstLoad := no
