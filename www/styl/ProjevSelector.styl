@@ -41,7 +41,7 @@
         transition opacity 0.4s, transform 0.2s, height 0.4s
         &.gs
           opacity 0.8
-      .year
+      .item-popisek
         position absolute
         top 1px
         left -35px
@@ -53,10 +53,12 @@
         z-index 2
         background linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 20%,rgba(255,255,255,1) 80%,rgba(255,255,255,0) 100%);
         pointer-events none
+        .president
+          display none
       &.active
         opacity 1
         z-index 2
-        .point.gs
+        .point
           opacity 1
           background #ab0000 !important
       &:hover
@@ -64,16 +66,23 @@
         z-index 3
         .point
           opacity 0.5
-        .year
+        .item-popisek
           opacity 1
       &.uhde
         .point
           top 34px
-        .year
-          top -57px
+        .item-popisek
+          top -37px
   &:not(:hover):not(.top)
     .point
       height 7px !important
+    li.active .item-popisek
+      opacity 1
+      color #8
+      .president
+        padding-right 0.5em
+        text-transform uppercase
+        display inline
   &:hover
   &.top
     height 155px
