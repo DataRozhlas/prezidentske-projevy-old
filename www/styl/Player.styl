@@ -14,8 +14,6 @@
     opacity 0.9
   &:hover
     opacity 1
-  &.error
-    display none
   .button
     font-size 60px
     width 100%
@@ -40,6 +38,21 @@
       margin-left -21px
       margin-left
       background yellow
+  .error-message
+    display none
+  &.error
+    opacity 0.9
+    position @position !important
+    top @top !important
+    right @right !important
+    left auto !important
+    .progress
+      display none
+    .error-message
+      display block
+      position absolute
+      top 83px
+      text-align center
   &.playing .button.pause
   &.paused .button.play
   &.loading .button.loading

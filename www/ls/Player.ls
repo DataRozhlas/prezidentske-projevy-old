@@ -29,6 +29,9 @@ class ig.Player
     @progressPoint = @progress.append \div
       ..attr \class \point
       ..style \left \0px
+    @element.append \div
+      ..attr \class \error-message
+      ..html "Nahrávka projevu bohužel není k dispozici"
     @duration = null
     @timeLimit = null
     @setListeners!
