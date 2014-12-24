@@ -18,7 +18,7 @@ Zjišťujeme, že to, co se nám před rokem jevilo jen jako zanedbaný dům, je
 
 Není to radostné zjištění a není divu, že jsme z něho všichni dost rozmrzelí a zklamaní.
 
-<span data-play-start="02:51.0" data-play-end="03:18.5">Mnoho občanů si klade otázku, proč se tak málo daří zúčtovat s minulostí, rehabilitovat všechny její oběti, napravit všechny spáchané křivdy a spravedlivě potrestat jejich viníky. Mnoho lidí se ptá, jak je možné, že panstvo minulého režimu, které se obohatilo na úkor společnosti, je stále ještě panstvem</span>, a jak je možné, že se tak úspěšně zabydluje v nových podmínkách. Mnoho občanů je podiveno nad tím, že se o rozsáhlé transformaci naší celé ekonomiky stále jen mluví a že ve svém každodenním životě přitom nespatřují jakékoli změny k lepšímu. Lidé jsou nervózní z toho, že jediné, co jim zatím plánovaná reforma přináší, je zdražování a hrozba ztráty sociálních jistot, včetně ztráty zaměstnání. Všichni jsme zneklidněni povážlivým vzrůstem kriminality. Naděje na lepší budoucnost je stále zřetelněji prorůstána nitkami pocitu právě opačného: totiž strachu z budoucnosti.
+<span data-play-start="02:52.02" data-play-end="03:18.76">Mnoho občanů si klade otázku, proč se tak málo daří zúčtovat s minulostí, rehabilitovat všechny její oběti, napravit všechny spáchané křivdy a spravedlivě potrestat jejich viníky. Mnoho lidí se ptá, jak je možné, že panstvo minulého režimu, které se obohatilo na úkor společnosti, je stále ještě panstvem</span>, a jak je možné, že se tak úspěšně zabydluje v nových podmínkách. Mnoho občanů je podiveno nad tím, že se o rozsáhlé transformaci naší celé ekonomiky stále jen mluví a že ve svém každodenním životě přitom nespatřují jakékoli změny k lepšímu. Lidé jsou nervózní z toho, že jediné, co jim zatím plánovaná reforma přináší, je zdražování a hrozba ztráty sociálních jistot, včetně ztráty zaměstnání. Všichni jsme zneklidněni povážlivým vzrůstem kriminality. Naděje na lepší budoucnost je stále zřetelněji prorůstána nitkami pocitu právě opačného: totiž strachu z budoucnosti.
 
 V atmosféře obecné netrpělivosti, nervozity, zklamání a pochybností se rodí a do našeho veřejného života vkrádají prvky nevraživosti, podezřívavosti, nedůvěry, vzájemného osočování; svoboda překvapivě otevřela dveře projevům našich nejrozmanitějších špatných vlastností a ukázala hloubku mravního úpadku, který postihl naše duše. Monolitního, viditelného a všemi snadno rozpoznatelného nepřítele jsme porazili a hledáme teď -- hnáni svou nespokojeností a potřebou najít živoucího viníka -- nepřítele jeden v druhém. Jeden druhým se cítíme být zklamáni nebo dokonce podvedeni.
 
@@ -51,7 +51,7 @@ V naší zemi je naprostá svoboda slova a projevu a je zaručena svoboda shroma
 
 (6)
 
-<span data-play-start="08:22" data-play-end="08:36">Zpřetrhali jsme dráty, kterými byla naše republika obklíčena a které z ní dělaly jeden veliký koncentrační tábor; kdokoli smí cestovat kamkoli a kdokoli smí přijíždět k nám.</span>
+<span data-play-start="08:23.08" data-play-end="08:36.77">Zpřetrhali jsme dráty, kterými byla naše republika obklíčena a které z ní dělaly jeden veliký koncentrační tábor; kdokoli smí cestovat kamkoli a kdokoli smí přijíždět k nám.</span>
 
 (7)
 
@@ -73,7 +73,7 @@ V roce, do něhož dnes vstupujeme, začneme tento prostor naplňovat obsahem. N
 
 Od projektu rekonstrukce domu přecházíme k rekonstrukci samé.
 
-<span data-play-start="10:33.5" data-play-end="11:01">Neskrývám, že rok 1991 bude rokem velké zkoušky. Začneme uskutečňovat to, co jsme si loni naplánovali, a začneme zjišťovat, jak se nám to daří a zda jsme opravdu schopni prakticky přinášet ty oběti, o nichž zatím jen teoreticky mluvíme a bez nichž se velká proměna naší země, pro kterou jsme se rozhodli, neobejde.</span>
+<span data-play-start="10:33.11" data-play-end="11:01.67">Neskrývám, že rok 1991 bude rokem velké zkoušky. Začneme uskutečňovat to, co jsme si loni naplánovali, a začneme zjišťovat, jak se nám to daří a zda jsme opravdu schopni prakticky přinášet ty oběti, o nichž zatím jen teoreticky mluvíme a bez nichž se velká proměna naší země, pro kterou jsme se rozhodli, neobejde.</span>
 
 Nikdo z nových představitelů našeho státu nevolá po těchto obětech proto, že by přál svým spoluobčanům utrpení. Všichni přemýšlejí o způsobech, jak tyto oběti omezit na nevyhnutelnou míru. Všichni však vědí, že oběti jsou nutné a že není jiné cesty. Dosavadní systém se zhroutil nejen u nás, ale v celém bývalém sovětském bloku, a spolu s ním se hroutí i dosavadní systém našich zahraničně-ekonomických vazeb, takže i kdybychom chtěli udržovat dál při životě dosavadní veskrze neúspěšný centralistický hospodářský systém, nemohli bychom ho udržet prostě proto, že už zmizelo samo prostředí, v němž by mohl přežívat a v němž jedině byl myslitelný.
 
@@ -102,7 +102,7 @@ Dnešním dnem začíná u nás, jak víte, stav relativně svobodné tvorby cen
 
 (5)
 
-Paralelně s těmito prvními kroky naší ekonomické reformy by měla vznikat na vládní úrovni jasná strategická koncepce ve dvou oblastech. Zaprvé v oblasti sociální, kde je třeba urychleně vybudovat ve spolupráci s odbory systém legislativních a správních pojistek proti nebezpečí nespravedlivě a nehumánně rozprostřených dopadů ekonomické reformy. Zadruhé pak v oblasti struktury a orientace naší energetiky a velkého průmyslu. V této věci nemáme dosud jasno a <span data-play-start="16:33.5" data-play-end="16:42.0">za daného stavu nelze spoléhat na to, že rodící se tržní prostředí vyřeší všechno za vládu.</span> Tato koncepce musí respektovat všechny základní ekologické požadavky.
+Paralelně s těmito prvními kroky naší ekonomické reformy by měla vznikat na vládní úrovni jasná strategická koncepce ve dvou oblastech. Zaprvé v oblasti sociální, kde je třeba urychleně vybudovat ve spolupráci s odbory systém legislativních a správních pojistek proti nebezpečí nespravedlivě a nehumánně rozprostřených dopadů ekonomické reformy. Zadruhé pak v oblasti struktury a orientace naší energetiky a velkého průmyslu. V této věci nemáme dosud jasno a <span data-play-start="16:34.21" data-play-end="16:42.10">za daného stavu nelze spoléhat na to, že rodící se tržní prostředí vyřeší všechno za vládu.</span> Tato koncepce musí respektovat všechny základní ekologické požadavky.
 
 (6)
 
@@ -114,7 +114,7 @@ Za rok se bude naše země pomalu připravovat k novým parlamentním volbám. P
 
 (8)
 
-Pokud jde o zahraniční politiku, měli bychom si udržet její dosavadní iniciativnost. Za důležité považuji, aby se co nejdřív, pokud možno ještě v lednu, sešel Politický poradní výbor Varšavské smlouvy, který by zrušil všechny její vojenské struktury, včetně spojeného velení, jak se na tom již členské země předběžně shodly. V duchu Pařížské charty chceme usilovat o novou kvalitu helsinského procesu, k čemuž by nás mohla dobře inspirovat i okolnost, že byl do Prahy umístěn stálý sekretariát KBSE. Při našem včleňování do existujících i nově vznikajících evropských struktur chceme svůj postup všestranně koordinovat především s Polskem a Maďarskem, těmito našimi nejbližšími sousedy. Věříme, že Československo bude už v lednu nebo únoru přijato za řádného člena Rady Evropy. <span data-play-start="18:55.5" data-play-end="19:23.0">Zároveň doufáme, že se nám podaří během tohoto roku dosáhnout výhodné asociační smlouvy s Evropskými společenstvími. Neskrýváme, že v budoucnosti bychom se rádi stali jejich plnoprávným členem. Usilujeme rovněž o těsnější spolupráci s NATO, i když prozatím nemáme v úmyslu do něj vstoupit.</span>
+Pokud jde o zahraniční politiku, měli bychom si udržet její dosavadní iniciativnost. Za důležité považuji, aby se co nejdřív, pokud možno ještě v lednu, sešel Politický poradní výbor Varšavské smlouvy, který by zrušil všechny její vojenské struktury, včetně spojeného velení, jak se na tom již členské země předběžně shodly. V duchu Pařížské charty chceme usilovat o novou kvalitu helsinského procesu, k čemuž by nás mohla dobře inspirovat i okolnost, že byl do Prahy umístěn stálý sekretariát KBSE. Při našem včleňování do existujících i nově vznikajících evropských struktur chceme svůj postup všestranně koordinovat především s Polskem a Maďarskem, těmito našimi nejbližšími sousedy. Věříme, že Československo bude už v lednu nebo únoru přijato za řádného člena Rady Evropy. <span data-play-start="18:55.74" data-play-end="19:23.65">Zároveň doufáme, že se nám podaří během tohoto roku dosáhnout výhodné asociační smlouvy s Evropskými společenstvími. Neskrýváme, že v budoucnosti bychom se rádi stali jejich plnoprávným členem. Usilujeme rovněž o těsnější spolupráci s NATO, i když prozatím nemáme v úmyslu do něj vstoupit.</span>
 
 
 Milí spoluobčané,
@@ -125,15 +125,15 @@ zajisté vám neříkám nic nového, když vám oznamuji, že nás čekají tě
 
 Uvědomte si, prosím, že špatného domácího jsme už odstranili a jakkoli je tento dům po dlouhých letech jeho vlády zruinovaný, je to teď už dům náš a jen na nás záleží, co z něho uděláme. Žádám vás proto všechny, Čechy, Slováky i příslušníky jiných národností, abyste si vážili našeho nového státu, chápali ho jako stát skutečně svůj a pamatovali na jeho celkový prospěch. První zatěžkávací zkoušku soužití národů v tomto státě jsme už prodělali a Češi i Slováci v ní obstáli.
 
-<span data-play-start="21:13" data-play-end="21:40">Přeji všem Slovákům, aby se jim co nejlépe dařilo budovat svoji svébytnou a hospodářsky samostatnou republiku. Věřím, že to bude republika lásky a hrdosti pro všechny její občany.
+<span data-play-start="21:14.35" data-play-end="21:29.62">Přeji všem Slovákům, aby se jim co nejlépe dařilo budovat svoji svébytnou a hospodářsky samostatnou republiku. Věřím, že to bude republika lásky a hrdosti pro všechny její občany.</span>
 
-Totéž přeji všem Čechům. Věřím, že jejich republika bude republikou moudrosti a tolerance pro všechny její občany.</span> 
+<span data-play-start="21:30.63" data-play-end="21:40.32">Totéž přeji všem Čechům. Věřím, že jejich republika bude republikou moudrosti a tolerance pro všechny její občany.</span> 
 
 Všem krajanům, Čechům a Slovákům, žijícím v cizině, přeji vše nejlepší. Čas diaspory skončil. Ať již se vrátí domů či zůstanou v nové vlasti, budou zde vítáni, stejně jako jejich nesmírně cenné zkušenosti a podnikavost.
 
 Obracím se na všechny, kteří svou prací vytvářejí hodnoty pro celou společnost. Po dlouhé době to budou opět hodnoty, které budou vytvářet pro sebe a své blízké, nikoli tedy pro své biřice a pro jakousi abstraktní budoucnost utopické ideologie. Vyzývám všechny z nich, kterým se rychle podaří nalézt své místo v novém hospodářském systému, aby cítili s těmi, kdo takovéto štěstí hned mít nebudou, a pomáhali jim podle svých možností. Obracím se na všechny, kdo pracují na půdě, a přeji jim hodně úspěchů v jedné z nejstarších lidských činností. Přeji jim, aby si rychle znovu osvojili hrdost hospodáře na dílo vykonané v potu tváře. Na zdaru jejich snažení budou záviset i základy spokojenosti a blahobytu nás všech.
 
-<span data-play-start="23:05.2" data-play-end="23:34">Obracím se na všechny, kdo se rozhodli jít zatím neprošlapanou cestou soukromého podnikání a přeji jim hodně štěstí v jejich práci. Prosím je, aby nezapomněli, že vytvořený zisk není cílem sám o sobě, nýbrž prostředkem pro další zvelebování společnosti a jejích statků a k tvorbě podmínek pro vskutku důstojný a plný lidský život.</span>
+<span data-play-start="23:06.07" data-play-end="23:34.91">Obracím se na všechny, kdo se rozhodli jít zatím neprošlapanou cestou soukromého podnikání a přeji jim hodně štěstí v jejich práci. Prosím je, aby nezapomněli, že vytvořený zisk není cílem sám o sobě, nýbrž prostředkem pro další zvelebování společnosti a jejích statků a k tvorbě podmínek pro vskutku důstojný a plný lidský život.</span>
 
 Obracím se na žáky, studenty a všechny mladé lidi. Prosím je, aby se soustředěně zadívali ke všem obzorům, které se před nimi otevírají a o kterých se jim ještě před rokem jenom snilo. Na jejich touze po vzdělání, mravních hodnotách i na jejich podnikavosti závisí naše budoucnost.
 
@@ -145,6 +145,6 @@ milí přátelé,
 
 čas novoročních projevů, které byly každý rok stejné, definitivně skončil. Pevně věřím, že již ten příští bude obsahovat více příjemných překvapení, než překvapení nepříjemných. Věřím, že vám budu moci oznámit, že rekonstrukce našeho domu úspěšně započala a jeho základy tkví opět pevně v této zemi a jejích nejlepších tradicích.
 
-<span data-play-start="24:57" data-play-end="25:23">Před rokem jsem svůj novoroční projev ukončil parafrází známé Komenského věty "Tvá vláda, lide, se k tobě navrátila!". Dnes bych na tuto větu navázal takto: "Je na tobě, lide, abys ukázal, že návrat vlády do tvých rukou měl smysl".</span>
+<span data-play-start="24:57.93" data-play-end="25:23.10">Před rokem jsem svůj novoroční projev ukončil parafrází známé Komenského věty "Tvá vláda, lide, se k tobě navrátila!". Dnes bych na tuto větu navázal takto: "Je na tobě, lide, abys ukázal, že návrat vlády do tvých rukou měl smysl".</span>
 
 Šťastný nový rok!
