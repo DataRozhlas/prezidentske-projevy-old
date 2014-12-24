@@ -31,6 +31,10 @@ ig.getData = ->
     [year, presId] = source.split "-"
     president = presidents[presId]
     year = parseInt year, 10
+    if year < 1949
+      year++
+    if year == 1934
+      year = 1935
     text = improveTypography text
     [title, ...paragraphs] = text.split /(\n\n)|(\n\r\n\r)|(\r\n\r\n)/
       .filter -> it and it.0 not in ["\n" "\r"]

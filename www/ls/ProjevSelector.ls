@@ -18,7 +18,7 @@ class ig.ProjevSelector
     ig.Events @
     @element = @parentElement.append \div
       ..attr \class "projev-selector top"
-    years = d3.extent @projevy.map (.year)
+    years = [1935 2015]
     maxLength = d3.max @projevy.map (.text.length)
     scale = d3.scale.linear!
       ..domain years
