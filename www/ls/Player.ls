@@ -2,7 +2,8 @@ class ig.Player
   (@parentElement) ->
     self = @
     @element = @parentElement.append \div
-      ..attr \class "player"
+      ..attr \class "player paused"
+      ..attr \preload \auto
     @playBtn = @element.append \div
       ..attr \class "button play"
       ..html "▶"
@@ -50,8 +51,11 @@ class ig.Player
         @updateProgress @audioElement.currentTime
       ..addEventListener \waiting ~>
         @element.attr \class "player loading"
+      ..addEventListener \loadstart ~>
+        @element.attr \class "player loading"
       ..addEventListener \error ~>
         @element.attr \class "player error"
+
 
   updateProgress: (time) ->
     return if not @duration
