@@ -18,7 +18,7 @@ class ig.ScrollWatch
     @onScrollPlayer!
 
   onScrollPlayer: ->
-    scroll = document.body.scrollTop - 192px
+    scroll = window.pageYOffset - 192px
     if scroll > 0
       @playerNode.style
         ..position = 'fixed'
@@ -31,7 +31,7 @@ class ig.ScrollWatch
         ..left = "auto"
 
   onScrollArrows: ->
-    scroll = document.body.scrollTop - 40px
+    scroll = window.pageYOffset - 40px
     if scroll > 0
       @leftArrowElm.style
         ..position = 'fixed'
@@ -53,7 +53,7 @@ class ig.ScrollWatch
 
 
   onScrollProjev: ->
-    scroll = document.body.scrollTop - 40px
+    scroll = window.pageYOffset - 40px
     if scroll > 0
       @eleNode.style
         ..position = "fixed"
