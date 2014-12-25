@@ -84,6 +84,7 @@ class ig.Player
 
   setIpad: ->
     return if @ipad
+    return if null is navigator.userAgent.match /ipad/i
     @ipad = yes
     @element.node!insertBefore @audioElement, @playBtn.node!
     @audioElement.controls = yes
