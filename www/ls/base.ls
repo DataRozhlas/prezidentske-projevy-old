@@ -120,7 +120,7 @@ init = ->
 
   container.append \div
     ..attr \class \projev-footer
-    ..html "<p>Pro Český rozhlas - Zprávy zpracovali Jan Boček, Jan Cibulka, Petr Kočí a Marcel Šulek.</p>
+    ..html "<p>Pro Český rozhlas &ndash; Zprávy zpracovali Jan Boček, Jan Cibulka, Petr Kočí a Marcel Šulek.</p>
     <p>Za audiozáznamy děkujeme Rešeršnímu oddělení ČRo.</p>
     <p>Za texty projevů děkujeme Jaroslavovi Davidovi z Katedry českého jazyka Filozofické fakulty Ostravské univerzity (texty byly zpracovávány v rámci projektu GAČR č. P406/11/0268 Historická sémantika).</p>
     <p>Fotografie prezidenta Miloše Zemana CC David Sedlecký, Wikimedia.</p>
