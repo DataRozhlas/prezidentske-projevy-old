@@ -43,7 +43,7 @@ ig.getData = ->
 
 improveTypography = (text) ->
   nbsp = String.fromCharCode 160
-  predlozkyRegex = new RegExp "(\\s(#{predlozky.join '|'})) " "g"
+  predlozkyRegex = new RegExp "(\\s(#{predlozky.join '|'})) " "gi"
   text
     .replace predlozkyRegex, '$1' + nbsp
     # .replace /([\.\s])"/g "$1„"
