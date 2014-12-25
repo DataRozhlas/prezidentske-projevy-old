@@ -124,9 +124,9 @@ init = ->
     <p>Za audiozáznamy děkujeme Rešeršnímu oddělení ČRo.</p>
     <p>Za texty projevů děkujeme Jaroslavovi Davidovi z Katedry českého jazyka Filozofické fakulty Ostravské univerzity (texty byly zpracovávány v rámci projektu GAČR č. P406/11/0268 Historická sémantika).</p>
     <p>Fotografie prezidenta Miloše Zemana CC BY SA David Sedlecký, Wikimedia.</p>
-    <p>Fotografie prezidenta Antonína Novotného CC BY SA Pot, Harry &ndash; Dutch National Archives, The Hague, Fotocollectie Algemeen Nederlands Persbureau (ANeFo), 1945-1989, bekijk toegang 2.24.01.04, <a href='http://www.gahetna.nl/collectie/afbeeldingen/fotocollectie/zoeken/weergave/detail/q/id/ab3a530a-d0b4-102d-bcf8-003048976d84' target='_top'>Bestanddeelnummer 921-1862</a>.</p>
+    <p>Fotografie prezidenta Antonína Novotného CC BY SA Pot, Harry &ndash; Dutch National Archives, The Hague, Fotocollectie Algemeen Nederlands Persbureau (ANeFo), 1945&ndash;1989, bekijk toegang 2.24.01.04, <a href='http://www.gahetna.nl/collectie/afbeeldingen/fotocollectie/zoeken/weergave/detail/q/id/ab3a530a-d0b4-102d-bcf8-003048976d84' target='_top'>Bestanddeelnummer 921-1862</a>.</p>
     <p>Ostatní fotografie © Archiv ČRo.</p>
-    <p>© 1997-#{new Date!getFullYear!} Český rozhlas</p>
+    <p>© 1997&ndash;#{new Date!getFullYear!} Český rozhlas</p>
     "
 
 if d3?
