@@ -40,6 +40,9 @@ class ig.Player
       ..addEventListener \canplay ~>
         @element.attr \class "player paused"
         @updateProgress 0
+      ..addEventListener \loadeddata ~>
+        @element.attr \class "player paused"
+        @updateProgress 0
       ..addEventListener \playing ~>
         @element.attr \class "player playing"
       ..addEventListener \durationchange (evt) ~>
@@ -55,7 +58,6 @@ class ig.Player
         @element.attr \class "player loading"
       ..addEventListener \error ~>
         @element.attr \class "player error"
-
 
   updateProgress: (time) ->
     return if not @duration
