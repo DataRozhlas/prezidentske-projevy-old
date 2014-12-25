@@ -22,7 +22,7 @@ class ig.ScrollWatch
     if scroll > 0
       @playerNode.style
         ..position = 'fixed'
-        ..top = '143px'
+        ..top = '163px'
         ..left = "#{@projevOffset.left + 742}px"
     else
       @playerNode.style
@@ -35,11 +35,11 @@ class ig.ScrollWatch
     if scroll > 0
       @leftArrowElm.style
         ..position = 'fixed'
-        ..top = "128px"
+        ..top = "148px"
         ..left = "#{@projevOffset.left - 10}px"
       @rightArrowElm.style
         ..position = 'fixed'
-        ..top = "128px"
+        ..top = "148px"
         ..left = "#{@projevOffset.left + 960}px"
     else
       @leftArrowElm.style
