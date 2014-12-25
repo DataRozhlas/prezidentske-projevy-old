@@ -10,7 +10,6 @@ init = ->
   projevSelector = new ig.ProjevSelector container, data
   projevContainer = container.append \div
     .attr \class \projev
-
   showNextProjev = ->
     return if currentProjevIndex == data.length - 1
     projevSelector.setActive data[currentProjevIndex + 1]
@@ -118,6 +117,18 @@ init = ->
   new ig.ScrollWatch projevSelector, leftArrow, rightArrow, player
 
   window.onhashchange = -> showHash window.location.hash.substr 1
+
+  container.append \div
+    ..attr \class \projev-footer
+    ..html "<p>Pro Český rozhlas - Zprávy zpracovali Jan Boček, Petr Kočí, Jan Cibulka a Marcel Šulek.</p>
+    <p>Za audiozáznamy děkujeme Rešeršnímu oddělení ČRo.</p>
+    <p>Za texty projevů děkujeme Jaroslavovi Davidovi z Katedry českého jazyka Filozofické fakulty Ostravské univerzity (texty byly zpracovávány v rámci projektu GAČR č. P406/11/0268 Historická sémantika).</p>
+    <p>Fotografie prezidenta Miloše Zemana CC David Sedlecký, Wikimedia.</p>
+    <p>Fotografie prezidenta Antonína Novotného CC <a href='http://www.gahetna.nl/en' target='_blank'>Nationaal Archief</a>.</p>
+    <p>Ostatní fotografie © Archiv ČRo.</p>
+    <p>© 1997-#{new Date!getFullYear!} Český rozhlas</p>
+    "
+
 if d3?
   init!
 else
