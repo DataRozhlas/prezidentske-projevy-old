@@ -73,7 +73,7 @@ init = ->
         ..attr \class "share twitter"
         ..attr \href (d, i) ~> "https://twitter.com/home?status=#{makeLinkTw projev, i}"
         ..attr \target \_blank
-    if projev.year == 1970
+    if projev.year in [1952 1954 1955 1956 1970]
       content.selectAll \p .attr \class "bad-transcript"
     [_, _, highlightedParagraph] = window.location.hash.split "-"
     highlightedParagraph = parseInt highlightedParagraph
