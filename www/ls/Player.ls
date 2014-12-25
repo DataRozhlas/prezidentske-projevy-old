@@ -71,7 +71,7 @@ class ig.Player
 
   setSrc: (src) ->
     @audioElement.src = src
-    @element.classed \loading yes
+    @element.attr \class "player loading"
 
   setListeners: ->
     document.addEventListener "click" ({target}:evt) ~>
