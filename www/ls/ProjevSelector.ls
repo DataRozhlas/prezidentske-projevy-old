@@ -50,10 +50,12 @@ class ig.ProjevSelector
       ..append \span
         ..attr \class "item-popisek"
         ..append \span
-          ..attr \class \president
-          ..html ~> it.president.name.split " " .pop!
+          ..attr \class \full-popisek
+          ..html ~>
+            name = it.president.name.split " " .pop!
+            "#{name} #{it.year - 1}&ndash;#{it.year}"
         ..append \span
-          ..attr \class \year
+          ..attr \class \short-popisek
           ..html ~> it.year
       ..on \click @~setActive
 
