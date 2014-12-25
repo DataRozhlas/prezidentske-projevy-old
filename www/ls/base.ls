@@ -55,7 +55,7 @@ init = ->
     rightArrow.classed \disabled currentProjevIndex == data.length - 1
     projevHeader.html "<h1>#{projev.year}: #{projev.president.name}</h1>
       <h2>&bdquo;#{projev.title}&ldquo;</h2>"
-    medailon.attr \src "./img/#{projev.president.id}.png"
+    medailon.attr \src "https://samizdat.cz/data/prezidentske-projevy/www/img/#{projev.president.id}.png"
     content.selectAll \p .remove!
     content.selectAll \p .data projev.paragraphs .enter!append \p
       ..html -> it
