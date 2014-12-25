@@ -78,12 +78,23 @@ class ig.Player
   setSrc: (src) ->
     @audioElement.src = src
     @element.attr \class "player loading"
+    <~ setInterval _, 1000
+    if @audioElement.readyState <= 1
+      @setIpad!
+
+  setIpad: ->
+    return if @ipad
+    @ipad = yes
+    @element.node!insertBefore @audioElement, @playBtn.node!
+    @audioElement.controls = yes
+
 
   setListeners: ->
     document.addEventListener "click" ({target}:evt) ~>
       start = target.getAttribute "data-play-start"
       end = target.getAttribute "data-play-end"
       if start isnt null and end isnt null
+        evt.preventDefault!
         [startSeconds, startMinutes] = start.split ":" .reverse!map parseFloat
         [endSeconds, endMinutes] = end.split ":" .reverse!map parseFloat
         startMinutes = startMinutes || 0

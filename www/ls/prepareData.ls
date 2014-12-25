@@ -35,10 +35,10 @@ ig.getData = ->
       year++
     if year == 1934
       year = 1935
+    text .= replace /<span data(.*?)<\/span/g '<a href="#" data$1</a'
     text = improveTypography text
     [title, ...paragraphs] = text.split /(\n\n)|(\n\r\n\r)|(\r\n\r\n)/
       .filter -> it and it.0 not in ["\n" "\r"]
-    console.log presId if not president
     {text, title, paragraphs, president, presId, year}
 
 improveTypography = (text) ->
