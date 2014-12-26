@@ -113,7 +113,7 @@ init = ->
   if window.location.hash
     showHash window.location.hash.substr 1
   else
-    showHash "1990-havel"
+    showHash "2015-zeman"
 
   new ig.ScrollWatch projevSelector, leftArrow, rightArrow, player
 
