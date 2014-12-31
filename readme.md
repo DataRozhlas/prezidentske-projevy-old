@@ -1,0 +1,1 @@
+http://www.rozhlas.cz/zpravy/data/_zprava/od-tgm-k-zemanovi-poslechnete-si-vanocni-a-novorocni-projevy-vsech-prezidentu--1436738
